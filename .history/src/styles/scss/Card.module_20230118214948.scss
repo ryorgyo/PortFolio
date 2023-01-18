@@ -1,0 +1,137 @@
+.Container {
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 40rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .Card {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    display: grid;
+    width: fit-content;
+    box-shadow: 6px 1rem 1rem 0 rgb(0 0 0 / 50%);
+    width: fit-content;
+    height: fit-content;
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+    .Img {
+      width: 27.5rem;
+      height: 20rem;
+    }
+
+    // work欄のcss
+    .workDiscription {
+      padding: 2rem;
+      width: fit-content;
+      .workCategory {
+        margin: 1rem 0;
+        display: flex;
+        width: 23.5rem;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        p {
+          color: #ffffff;
+          width: max-content;
+          border-radius: 0.5rem;
+          display: block;
+          white-space: nowrap;
+          padding: 0.3rem;
+          &:not(:last-child) {
+            margin-right: 0.5rem;
+          }
+        }
+        .pink {
+          background-color: #ff00c7;
+        }
+        .blue {
+          background-color: #00ffd1;
+        }
+        .green {
+          background-color: #00ff38;
+        }
+        .black {
+          background-color: #000000;
+        }
+        .orange {
+          background-color: #ffb800;
+        }
+        .gray {
+          background-color: #d9d9d9;
+        }
+      }
+      p {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+      }
+    }
+
+    // blog欄のcss
+    .blogDiscription {
+      padding: 2rem;
+      width: fit-content;
+      h3 {
+        font-size: 1.6rem;
+        line-height: 1.3em;
+        font-weight: bold;
+        max-width: 23.5rem;
+      }
+      .blogCategory {
+        margin: 1rem 0;
+        display: flex;
+        width: 23.5rem;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        p {
+          color: #ffffff;
+          width: max-content;
+          border-radius: 0.5rem;
+          display: block;
+          white-space: nowrap;
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+          padding: 0.3rem;
+          &:not(:last-child) {
+            margin-right: 0.5rem;
+          }
+        }
+        .pink {
+          background-color: #ff00c7;
+        }
+        .blue {
+          background-color: #00ffd1;
+        }
+        .green {
+          background-color: #00ff38;
+        }
+        .black {
+          background-color: #000000;
+        }
+        .orange {
+          background-color: #ffb800;
+        }
+        .gray {
+          background-color: #d9d9d9;
+        }
+      }
+      .date {
+        float: right;
+        p {
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+        }
+      }
+    }
+  }
+}
