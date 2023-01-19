@@ -1,10 +1,18 @@
 import styles from "src/styles/css/Card.module.css";
 import { FC } from "react";
-import { bgColorChecker } from "src/components/top/List/Card";
+import { bgColorChecker } from "src/components/top/List/WorkCard";
+import Date from "src/components/date";
 
-export const TestBlog: FC<{
+export const Blog: FC<{
   node: any;
 }> = ({ node }) => {
+  const dateChange = (date) => {
+    const str = date;
+    const year = parseInt(str.substring(0, 4));
+    const month = parseInt(str.substring(5, 7));
+    const day = parseInt(str.substring(8, 10));
+    return `執筆日 ${year}/${month}/${day}`;
+  };
   return (
     <div className={styles.blogDiscription}>
       <h3>{node.title}</h3>
@@ -18,7 +26,7 @@ export const TestBlog: FC<{
         })}
       </div>
       <div className={styles.date}>
-        <p>{node.date}</p>
+        <p>{dateChange(node.date)}</p>
       </div>
     </div>
   );

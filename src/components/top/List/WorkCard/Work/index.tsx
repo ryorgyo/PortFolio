@@ -1,8 +1,9 @@
 import styles from "src/styles/css/Card.module.css";
 import { FC } from "react";
-import { bgColorChecker, cardType } from "src/components/top/List/Card";
+import { bgColorChecker } from "../../BlogCard";
+import { cardType } from "..";
 
-export const WorkCard: FC<{
+export const Work: FC<{
   card: cardType;
 }> = (props) => {
   return (

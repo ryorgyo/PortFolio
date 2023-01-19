@@ -9,7 +9,7 @@ import { Footer } from "src/components/top/Footer";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { getAllPostsForHome } from "lib/api";
-import { TestList } from "src/components/top/TestList";
+import Contact from "src/components/top/Contact";
 
 export type workCardType = {
   createdDate: string;
@@ -104,12 +104,9 @@ const Home = ({ allPosts: { edges }, preview }) => {
           intro={introduce}
         />
         <List workCards={WORKCARDs} style="workList" />
-        {/* <List blogCards={BLOGCARDs} style="blogList" /> */}
-        <TestList posts={post} style="blogList" />
+        <List posts={post} style="blogList" />
         <SNS />
-        <div className={styles.contact}>
-          <div className={styles.container}></div>
-        </div>
+        <Contact />
       </main>
       <Footer />
     </div>

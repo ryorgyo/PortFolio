@@ -1,13 +1,15 @@
 "use client";
 import styles from "src/styles/css/Home.module.css";
 import React, { FC, MouseEventHandler, useState } from "react";
-import type { workCardType, blogCardType } from "src/pages";
-import { Card } from "src/components/top/List/Card";
+import type { workCardType } from "src/pages";
+import { WorkCard } from "src/components/top/List/WorkCard";
 import { H2Animation } from "src/components/top/List/H2Animation";
+import Link from "next/link";
+import { BlogCard } from "src/components/top/List/BlogCard";
 
 export const List: FC<{
   workCards?: workCardType;
-  blogCards?: blogCardType;
+  posts?: any;
   style: string;
 }> = (props) => {
   const [hover, setHover] = useState(false);
@@ -22,12 +24,14 @@ export const List: FC<{
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOver}
       >
-        <H2Animation hover={hover} />
+        <Link href="/Blog">
+          <H2Animation hover={hover} />
+        </Link>
       </h2>
       {props.workCards ? (
-        <Card workCards={props.workCards} />
+        <WorkCard workCards={props.workCards} />
       ) : (
-        <Card blogCards={props.blogCards} />
+        <BlogCard posts={props.posts} />
       )}
     </div>
   );

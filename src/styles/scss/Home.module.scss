@@ -241,7 +241,7 @@
       // }
     }
     .contact {
-      .container {
+      .box {
         margin-left: calc(((100vw - 100%) / 2) * -2);
         // margin-right: calc(((100vw - 100%) / 2) * -1);
         background-color: #00ffd1;
@@ -253,8 +253,14 @@
     height: 10rem;
     display: grid;
     place-items: center;
-    p {
-      font-size: 1.4rem;
+    div {
+      display: grid;
+      place-items: center;
+      p {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        font-weight: bold;
+      }
     }
   }
 }

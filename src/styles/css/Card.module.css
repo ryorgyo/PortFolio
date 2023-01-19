@@ -12,13 +12,9 @@
   font-size: 1.6rem;
   line-height: 1.6rem;
   display: grid;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   box-shadow: 6px 1rem 1rem 0 rgba(0, 0, 0, 0.5);
   width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 .Container .Card:not(:last-child) {
@@ -31,8 +27,6 @@
 }
 .Container .Card .workDiscription {
   padding: 2rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .Container .Card .workDiscription .workCategory {
@@ -48,8 +42,6 @@
 }
 .Container .Card .workDiscription .workCategory p {
   color: #ffffff;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   border-radius: 0.5rem;
   display: block;
@@ -83,8 +75,6 @@
 }
 .Container .Card .blogDiscription {
   padding: 2rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .Container .Card .blogDiscription h3 {
@@ -106,8 +96,6 @@
 }
 .Container .Card .blogDiscription .blogCategory p {
   color: #ffffff;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   border-radius: 0.5rem;
   display: block;
