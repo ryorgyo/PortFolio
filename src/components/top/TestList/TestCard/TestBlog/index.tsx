@@ -9,7 +9,7 @@ export const TestBlog: FC<{
     <div className={styles.blogDiscription}>
       <h3>{node.title}</h3>
       <div className={styles.blogCategory}>
-        {node.tags.edges.map((tag, index) => {
+        {node.tags.edges.map((tag, index: number) => {
           return (
             <p className={styles[bgColorChecker(tag.node.name)]} key={index}>
               {tag.node.name}
