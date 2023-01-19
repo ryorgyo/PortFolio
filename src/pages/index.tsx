@@ -10,6 +10,7 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 import { getAllPostsForHome } from "lib/api";
 import Contact from "src/components/top/Contact";
+import BackGround from "src/components/top/BackGround";
 
 export type workCardType = {
   createdDate: string;
@@ -95,6 +96,7 @@ const Home = ({ allPosts: { edges }, preview }) => {
       <Head>
         <title>Portfolio Site</title>
       </Head>
+      <BackGround />
       <Header />
       <main>
         <FirstView
