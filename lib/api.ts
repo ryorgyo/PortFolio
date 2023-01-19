@@ -92,7 +92,6 @@ export async function getAllPostsForHome(preview) {
                 }
               }
             }
-            uri
           }
         }
       }

@@ -38,9 +38,12 @@ export const TestCard: FC<{
   return (
     <div className={styles.Container}>
       {posts.map((post) => {
-        console.log(post);
         return (
-          <Link className={styles.Card} href={`/posts/${post.node.slug}`}>
+          <Link
+            className={styles.Card}
+            href={`/posts/${post.node.slug}`}
+            key={post.node.slug}
+          >
             <div className={styles.Img}>
               <Image
                 src={post.node.featuredImage?.node.sourceUrl}
