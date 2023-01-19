@@ -8,12 +8,13 @@
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
 
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
-@import url(http://fonts.googleapis.com/css?family=Indie+Flower|Pacifico);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 html {
   font-size: 0.6944444444vw;
   font-family: "Noto Sans JP", sans-serif;
+  /* font-family: "Noto Sans JP", sans-serif; */
 }
 *:where(
     :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
