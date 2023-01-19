@@ -1,9 +1,8 @@
 import Image from "next/image";
 import styles from "src/styles/css/Card.module.css";
 import { FC } from "react";
-import type { workCardType, blogCardType } from "src/pages";
-import { WorkCard } from "src/components/top/List/Card/Work";
-import { BlogCard } from "src/components/top/List/Card/Blog";
+import type { workCardType } from "src/pages";
+import { Work } from "./Work";
 
 export type cardType = {
   createdDate?: string;
@@ -33,11 +32,10 @@ export const bgColorChecker = (category: string) => {
   return "gray";
 };
 
-export const Card: FC<{
-  workCards?: workCardType;
-  blogCards?: blogCardType;
+export const WorkCard: FC<{
+  workCards: workCardType;
 }> = (props) => {
-  const cards = props.workCards ? props.workCards! : props.blogCards!;
+  const cards = props.workCards;
 
   return (
     <div className={styles.Container}>
@@ -45,12 +43,18 @@ export const Card: FC<{
         return (
           <div className={styles.Card} key={index}>
             <div className={styles.Img}>
-              <Image src="" alt="" layout=""></Image>
+              <Image
+                src="/top/noImage.png"
+                alt=""
+                layout=""
+                fill
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
+              ></Image>
             </div>
             {/* workCardsが空欄でない時のdiscription欄のレイアウト */}
-            {props.workCards && <WorkCard card={card} />}
-            {/* blogCardsが空欄でない時のdiscription欄のレイアウト */}
-            {props.blogCards && <BlogCard card={card} />}
+            <Work card={card} />
           </div>
         );
       })}

@@ -216,7 +216,7 @@
   display: flex;
   margin: 5rem 0 0 -20rem;
 }
-.container main .contact .container {
+.container main .contact .box {
   margin-left: calc((100vw - 100%) / 2 * -2);
   background-color: #00ffd1;
   height: 30rem;
@@ -226,8 +226,14 @@
   display: grid;
   place-items: center;
 }
-.container footer p {
+.container footer div {
+  display: grid;
+  place-items: center;
+}
+.container footer div p {
   font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=Home.module.css.map */

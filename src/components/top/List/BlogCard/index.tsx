@@ -1,17 +1,8 @@
 import Image from "next/image";
 import styles from "src/styles/css/Card.module.css";
 import { FC } from "react";
-import { TestBlog } from "./TestBlog";
+import { Blog } from "./Blog";
 import Link from "next/link";
-
-export type cardType = {
-  createdDate?: string;
-  cop?: string;
-  category: string[];
-  techUse?: string[];
-  title?: string;
-  date?: string[];
-};
 
 export const bgColorChecker = (category: string) => {
   if (category == "可愛い") {
@@ -32,7 +23,7 @@ export const bgColorChecker = (category: string) => {
   return "gray";
 };
 
-export const TestCard: FC<{
+export const BlogCard: FC<{
   posts: any;
 }> = ({ posts }) => {
   return (
@@ -46,15 +37,19 @@ export const TestCard: FC<{
           >
             <div className={styles.Img}>
               <Image
-                src={post.node.featuredImage?.node.sourceUrl}
-                alt={`Cover Image for ${post.node.title}`}
+                src={
+                  post.node.featuredImage
+                    ? post.node.featuredImage.node.sourceUrl
+                    : "/top/noImage.png"
+                }
+                alt=""
                 fill
-                //   sizes="(max-width: 768px) 100vw,
-                // (max-width: 1200px) 50vw,
-                // 33vw"
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
               ></Image>
             </div>
-            <TestBlog node={post.node} />
+            <Blog node={post.node} />
           </Link>
         );
       })}
